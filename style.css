@@ -12,6 +12,7 @@ body {
 	gap: 2px;
 	max-width: 1000px;
 	margin: auto;
+	height: 98vh;
 }
 
 .container {
