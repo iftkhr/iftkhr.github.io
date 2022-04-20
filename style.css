@@ -59,7 +59,7 @@ p {
 }
 
 .title {
-	grid-row: span 4;
+	grid-row: span 3;
 	width: 100%;
 	padding: 20px 0;
 }
@@ -135,7 +135,7 @@ p {
 .article-image,
 .research-image {
 	width: 100%;
-	max-width: 300px;
+	max-width: 500px;
 }
 
 a {
