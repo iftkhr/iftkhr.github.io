@@ -1,13 +1,3 @@
-// about section
-
-document
-	.getElementsByClassName('about-heading')[0]
-	.addEventListener('click', () => {
-		document
-			.getElementsByClassName('about-paragraph')[0]
-			.classList.toggle('hide');
-	});
-
 // projects section
 
 document
@@ -27,11 +17,11 @@ for (
 ) {
 	document
 		.getElementsByClassName('project-heading')
-		[i].addEventListener('click', () => {
-			document
-				.getElementsByClassName('project-paragraph')
-				[i].classList.toggle('hide');
-		});
+	[i].addEventListener('click', () => {
+		document
+			.getElementsByClassName('project-paragraph')
+		[i].classList.toggle('hide');
+	});
 }
 
 // articles section
@@ -53,11 +43,11 @@ for (
 ) {
 	document
 		.getElementsByClassName('article-heading')
-		[i].addEventListener('click', () => {
-			document
-				.getElementsByClassName('article-paragraph')
-				[i].classList.toggle('hide');
-		});
+	[i].addEventListener('click', () => {
+		document
+			.getElementsByClassName('article-paragraph')
+		[i].classList.toggle('hide');
+	});
 }
 
 // researches section
@@ -79,19 +69,9 @@ for (
 ) {
 	document
 		.getElementsByClassName('research-heading')
-		[i].addEventListener('click', () => {
-			document
-				.getElementsByClassName('research-paragraph')
-				[i].classList.toggle('hide');
-		});
-}
-
-// contacts section
-
-document
-	.getElementsByClassName('contacts-heading')[0]
-	.addEventListener('click', () => {
+	[i].addEventListener('click', () => {
 		document
-			.getElementsByClassName('contacts-list')[0]
-			.classList.toggle('hide');
+			.getElementsByClassName('research-paragraph')
+		[i].classList.toggle('hide');
 	});
+}
