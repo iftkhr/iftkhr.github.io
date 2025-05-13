@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 
 body {
-	background: linear-gradient(#00a5cf 50%, #05a3fe) fixed no-repeat;
-	font-family: 'Ubuntu', sans-serif;
+	background: url('./bg.jpg');
+	background-size: cover;
+	font-family: 'Cascadia Code', sans-serif;
 	font-size: 20px;
 }
 
 .main-container {
 	display: grid;
 	grid-template-columns: repeat(2, auto);
-	gap: 2px;
+	gap: 5px;
 	max-width: 1000px;
 	margin: auto;
 	height: 98vh;
@@ -20,18 +21,24 @@ body {
 	align-items: center;
 	align-content: center;
 	justify-items: center;
-	background: rgba(0, 0, 0, 0.4);
+	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(10px);
 	color: #fff;
 	width: 100%;
-	padding: 10px 0;
+	padding: 20px;
+	text-align: justify;
 }
 
 .container:hover {
-	background: rgba(0, 0, 0, 0.5);
+	backdrop-filter: blur(20px);
 }
 
-img {
-	width: 30px;
+.profile {
+	text-align: center;
+}
+
+.profile img {
+	width: 40px;
 }
 
 p {
@@ -39,22 +46,16 @@ p {
 }
 
 .skills {
-	display: grid;
-	grid-template-columns: repeat(5, 20%);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	justify-items: center;
 	align-items: center;
 	padding-top: 20px;
-	gap: 5px;
+	gap: 20px;
 }
 
 .skill-icon {
-	width: 40px;
-}
-
-.skill-icon:nth-child(4),
-.skill-icon:nth-child(11),
-.skill-icon:nth-child(12),
-.skill-icon:nth-child(16) {
 	width: 60px;
 }
 
@@ -62,6 +63,7 @@ p {
 	grid-row: span 3;
 	width: 100%;
 	padding: 20px 0;
+	text-align: center;
 }
 
 .title:hover {
