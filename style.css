@@ -92,11 +92,7 @@ body {
 	cursor: pointer;
 }
 
-.about-paragraph,
-.project-paragraph,
-.article-paragraph,
-.researche-paragraph,
-.contact-paragraph {
+.about-paragraph {
 	padding: 20px;
 }
 
