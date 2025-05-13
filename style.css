@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 
 body {
-	background: url('./bg.jpg');
+	background: url('./bg.jpg') no-repeat center fixed;
 	background-size: cover;
 	font-family: 'Cascadia Code', sans-serif;
 	font-size: 20px;
@@ -10,14 +10,14 @@ body {
 
 .main-container {
 	display: grid;
-	grid-template-columns: repeat(2, auto);
+	grid-template-columns: 3fr 1fr;
 	gap: 5px;
 	max-width: 1000px;
 	margin: auto;
 	height: 98vh;
 }
 
-.container {
+.card {
 	display: grid;
 	align-items: center;
 	align-content: center;
@@ -25,12 +25,26 @@ body {
 	background: rgba(0, 0, 0, 0.5);
 	backdrop-filter: blur(10px);
 	color: #fff;
-	width: 100%;
-	text-align: justify;
+	padding: 10px;
+	box-sizing: border-box;
 }
 
-.container:hover {
+.card:hover {
 	backdrop-filter: blur(20px);
+}
+
+.title {
+	grid-row: span 3;
+	text-align: center;
+}
+
+.title:hover {
+	cursor: default;
+}
+
+.title img {
+	width: 200px;
+	border-radius: 100%;
 }
 
 .profile {
@@ -39,10 +53,6 @@ body {
 
 .profile img {
 	width: 40px;
-}
-
-p {
-	margin: 0 20px 20px 20px;
 }
 
 .skills {
@@ -57,26 +67,6 @@ p {
 
 .skill-icon {
 	width: 60px;
-}
-
-.title {
-	grid-row: span 3;
-	width: 100%;
-	padding: 20px 0;
-	text-align: center;
-}
-
-.title:hover {
-	cursor: default;
-}
-
-.title img {
-	width: 200px;
-	border-radius: 100%;
-}
-
-.title h1 {
-	margin-bottom: 0;
 }
 
 .about,
@@ -102,6 +92,15 @@ p {
 	width: 100%;
 	cursor: pointer;
 }
+
+.about-paragraph,
+.project-paragraph,
+.article-paragraph,
+.researche-paragraph,
+.contact-paragraph {
+	padding: 20px;
+}
+
 
 .projects-list,
 .articles-list,
