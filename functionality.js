@@ -1,77 +1,23 @@
-// projects section
+// Footer year
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-document
-	.getElementsByClassName('projects-heading')[0]
-	.addEventListener('click', () => {
-		document
-			.getElementsByClassName('projects-list')[0]
-			.classList.toggle('hide');
-	});
+// Scroll-reveal animations
+const revealEls = document.querySelectorAll('.reveal');
 
-// project
-
-for (
-	let i = 0;
-	i < document.getElementsByClassName('project-heading').length;
-	i++
-) {
-	document
-		.getElementsByClassName('project-heading')
-	[i].addEventListener('click', () => {
-		document
-			.getElementsByClassName('project-paragraph')
-		[i].classList.toggle('hide');
-	});
-}
-
-// articles section
-
-document
-	.getElementsByClassName('articles-heading')[0]
-	.addEventListener('click', () => {
-		document
-			.getElementsByClassName('articles-list')[0]
-			.classList.toggle('hide');
-	});
-
-// article
-
-for (
-	let i = 0;
-	i < document.getElementsByClassName('article-heading').length;
-	i++
-) {
-	document
-		.getElementsByClassName('article-heading')
-	[i].addEventListener('click', () => {
-		document
-			.getElementsByClassName('article-paragraph')
-		[i].classList.toggle('hide');
-	});
-}
-
-// researches section
-
-document
-	.getElementsByClassName('researches-heading')[0]
-	.addEventListener('click', () => {
-		document
-			.getElementsByClassName('researches-list')[0]
-			.classList.toggle('hide');
-	});
-
-// research
-
-for (
-	let i = 0;
-	i < document.getElementsByClassName('research-heading').length;
-	i++
-) {
-	document
-		.getElementsByClassName('research-heading')
-	[i].addEventListener('click', () => {
-		document
-			.getElementsByClassName('research-paragraph')
-		[i].classList.toggle('hide');
-	});
+if ('IntersectionObserver' in window) {
+	const observer = new IntersectionObserver(
+		(entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					entry.target.classList.add('visible');
+					observer.unobserve(entry.target);
+				}
+			});
+		},
+		{ threshold: 0.12 }
+	);
+	revealEls.forEach((el) => observer.observe(el));
+} else {
+	revealEls.forEach((el) => el.classList.add('visible'));
 }
